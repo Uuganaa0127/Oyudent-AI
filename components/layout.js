@@ -1,14 +1,12 @@
 // pages/_app.js
 
+import Layout from "@/components/Layout";
 import "@/styles/globals.css";
-import TopBar from "@/components/TopBar";
-import { CartProvider } from "@/context/CartContext";
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <CartProvider>
-      <TopBar />
+    <Layout>
       <Component {...pageProps} />
-    </CartProvider>
+    </Layout>
   );
 }
